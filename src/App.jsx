@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [prime, setPrime] = useState(2)
 
   return (
     <>
@@ -28,8 +29,32 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <h2>Next Prime Number</h2>
+        <button onClick={() => setPrime(nextPrimeNumber(prime))}>
+          prime is {prime}
+        </button>
     </>
   )
+}
+
+function nextPrimeNumber(x) {
+  let found = false;
+
+  if (x > 200) {
+    return 2;
+  }
+
+  while (!found) {
+    x++;
+    found = true;
+    for (let i = 2; i <= Math.sqrt(x); i++) {
+      if (x % i === 0) {
+        found = false;
+        break;
+      }
+    }
+  }
+  return x;
 }
 
 export default App
