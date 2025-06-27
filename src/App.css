@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+
+/* fix non-visible h1-text, caused by: import "@aws-amplify/ui-react/styles.css"; */
+h1 {
+  color: #ffe600; 
+}
+h2 {
+  color: #000000; 
+}
+
+button {
+  background-color: #f9f9f9;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  box-shadow: 0 0 0 1px #646cff;
+}
