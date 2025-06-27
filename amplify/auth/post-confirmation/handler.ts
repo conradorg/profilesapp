@@ -37,6 +37,10 @@ const client = generateClient<Schema>({
   authMode: "iam",
 });
 
+// post confirmation trigger handler which creates a user profile
+// no explicite relation between PostConfirmation and PostConfirmationTriggerHandler
+// - this is just a convetion
+// - every PostConfirmation Action must be handled here
 export const handler: PostConfirmationTriggerHandler = async (event) => {
   await client.graphql({
     query: createUserProfile,
