@@ -24,3 +24,6 @@ This project provides a simple web application using user authentication and aut
 4. View UI / Refresh App
     - React app loads from Amplify -> app authenticates user -> Cognito returns user info/token from cached session -> continue with interaction 3
 5. Change age and load it again: ...
+
+## Resources
+- [AWS: Build a Basic Web Application](https://aws.amazon.com/getting-started/hands-on/build-web-app-s3-lambda-api-gateway-dynamodb/)
